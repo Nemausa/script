@@ -15,9 +15,9 @@ print(newtext)
 dic = {}
 dic['origin'] = 'now'
 def change(m):
-    return dic[m.group(1)]
+    return dic[m.group(0)]
 
-pat = re.compile(r'.*>(.*)<.*')
+pat = re.compile(r'(?<=>).*(?=<)')
 line = r'<string name="export">origin</string>'
 newline = pat.sub(change, line)
 print(newline)

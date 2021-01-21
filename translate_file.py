@@ -56,12 +56,12 @@ class translate_file:
                 w.writelines(replace_lines)
 
     def replace(self, lines):
-        pat = re.compile(r'.*>(.*)<.*')
+        pat = re.compile(r'(?<=>).*(?=<)')
         replace_lines = []
         for line in lines:
             m = pat.match(line)
             if m is not None:
-                line = line.replace(m.group(1), self.dic[m.group(1)])
+                line = line.replace(m.group(0), self.dic[m.group(0)])
             else:
                 pass
             replace_lines.append(line)

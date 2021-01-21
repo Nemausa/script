@@ -13,11 +13,13 @@ print(newtext)
 
 
 dic = {}
-dic['origin'] = 'now'
+dic['origin'] = '999'
 def change(m):
     return dic[m.group(0)]
 
+
 pat = re.compile(r'(?<=>).*(?=<)')
+# pat = re.compile(r'.*>(.*$)<.*')
 line = r'<string name="export">origin</string>'
 newline = pat.sub(change, line)
 print(newline)
@@ -31,3 +33,6 @@ print(newline)
 # <string name="export">now</string>
 
 
+it = '<!--type: 40000, model: 29632, vendor: 1 (CKST), id: 0, flags: {cksh_768}-->'
+result = re.search(r'(?<=<!--)[^>,]+', it)
+print(result.group())

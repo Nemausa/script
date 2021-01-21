@@ -15,7 +15,9 @@ class Nemausa:
         self.ws1 = self.wb.create_sheet(title="Data")
 
     def read(self, input):
-        # self.data.clear()
+        self.data.clear()
+        path = input.replace('xtw\\','')
+        self.data.append(path)
         with open(input, 'r', encoding='UTF-8') as f:
             lines = f.readlines()
             self.get(lines)
@@ -48,9 +50,10 @@ for path, dir_list, file_list in g:
     for file_name in file_list:
         file = os.path.join(path, file_name)
         nemausa.read(file)
+        nemausa.write()
         count +=1
         print(count)
 
 
-nemausa.write()
+
 os.system('pause')

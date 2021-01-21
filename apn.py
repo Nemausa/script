@@ -1,6 +1,9 @@
-#-*- coding:utf-8 -*-
-import os
+#-*-coding:utf-8-*-
 import time
+from numba import jit
+
+import os
+
 import _thread
 
 

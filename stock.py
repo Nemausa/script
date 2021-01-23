@@ -2,6 +2,7 @@ import os
 import csv
 import time
 import openpyxl
+import webbrowser
 import numpy as np
 import tushare as ts
 from math import floor
@@ -26,8 +27,9 @@ class Stock:
     def __init__(self) -> None:
         super().__init__()
 
-        array = [100*n for n in range(1,2)]
-        array.append(50)
+        # array = [10*n for n in range(1,2)]
+        array = []
+        array.append(100)
         self.array = array
         ts.set_token('e0971dcf036c61bd699ac86762b33d9e6d44025979ac91f6dfc58b31')
         self.pro = ts.pro_api()
@@ -36,6 +38,7 @@ class Stock:
         self.pool = ThreadPoolExecutor(128)
         self.price = list()
         self.result = list()
+        self.count = 0
 
 
 
@@ -63,7 +66,7 @@ class Stock:
 
 
     def daily(self,ts_code):
-        date = '20210121'
+        date = '20210122'
         df = self.pro.daily(ts_code=ts_code, start_date=date, end_date=date)
         # print(df.to_dict())
 
@@ -89,8 +92,8 @@ class Stock:
                 # print(ts_code, value)
                 near_value = self.find_nearest(value)
                 if value>=near_value*0.93 and value<=near_value*1.07:
-                    if change > 0:
-                        self.result.append(ts_code)
+                    # if change > 0:
+                    self.result.append(ts_code)
             except:
                 pass
 
@@ -103,19 +106,39 @@ class Stock:
         stock_wb =  openpyxl.load_workbook(filename = 'stock.xlsx')
         stock_source = stock_wb['Sheet1']
         dic = dict()
-        for row in range(1,stock_source.max_row):
+        for row in range(1,stock_source.max_row+1):
             key = stock_source.cell(row=row, column=2).value
             value = stock_source.cell(row=row, column=4).value
+
             dic[key] = value
 
-        
-        daily_wb = openpyxl.load_workbook(filename='0.xlsx')
-        daily_source = daily_wb['Sheet1']
-        for row in range(2, 65):
-            key = daily_source.cell(row=row, column=2).value
-            daily_source.cell(row=row, column=13, value=dic[key])
+        for i in range(self.count+1):
+            filename = str(i)+'.xlsx'
+            daily_wb = openpyxl.load_workbook(filename=filename)
+            daily_source = daily_wb['Sheet1']
+            for row in range(2, daily_source.max_row+1):
+                key = daily_source.cell(row=row, column=2).value
+                daily_source.cell(row=row, column=13, value=dic[key])
 
-        daily_wb.save(filename='0.xlsx')   
+            daily_wb.save(filename=filename)   
+
+
+
+    def open_url(self):
+        for i in range(self.count+1):
+            filename = str(i)+'.xlsx'
+            daily_wb = openpyxl.load_workbook(filename=filename)
+            daily_source = daily_wb['Sheet1']
+            for row in range(2, daily_source.max_row+1):
+                ts_code = daily_source.cell(row=row, column=2).value
+                li_split = ts_code.split('.')
+                scode = li_split[-1]+li_split[0]
+                url = 'https://xueqiu.com/S/'+scode
+                new = 0
+                if row%10==0:
+                    new = 1
+                
+                webbrowser.open(url, new)
 
         
 
@@ -134,8 +157,11 @@ def run():
     # for i, item in zip(range(num),res):
     #     df = stock.daily(','.join(item))
     #     df.to_excel(str(i)+'.xlsx')
+    #     stock.count = i
 
+    stock.count = 0
     stock.add_name()
+    stock.open_url()
     
     
     time_end = time.time()

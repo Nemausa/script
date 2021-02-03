@@ -6,10 +6,8 @@ import webbrowser
 import numpy as np
 import tushare as ts
 from math import floor
-from pandas.io.parsers import read_csv
-from concurrent.futures import ThreadPoolExecutor,  as_completed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from tushare import stock
 
 
 def partition(ls, size):
@@ -66,11 +64,13 @@ class Stock:
 
 
     def daily(self,ts_code):
-        date = '20210122'
+        date = '20210202'
         df = self.pro.daily(ts_code=ts_code, start_date=date, end_date=date)
+        # print(df)
         # print(df.to_dict())
 
         # print(df)
+        df.to_csv('megrez.csv')
         return df
 
 
@@ -79,19 +79,20 @@ class Stock:
         n = 50
         i=0
         res = partition(self.data, floor(len(self.data)/n))
-        for item in res:
-            i = i+1
-            print("all:", str(i))
-            df = self.daily(','.join(item))
-            self.calcualte(df)
+
+        all_task = [self.pool.submit(self.calcualte, (item)) for item in res]
+        for future in as_completed(all_task):
+            pass
+
         
 
-    def calcualte(self, df):  
+    def calcualte(self, item): 
+        df = self.daily(','.join(item)) 
         for value, ts_code, change in zip(df.high, df.ts_code, df.change):
             try:
                 # print(ts_code, value)
                 near_value = self.find_nearest(value)
-                if value>=near_value*0.93 and value<=near_value*1.07:
+                if value>=near_value*0.85 and value<=near_value:
                     # if change > 0:
                     self.result.append(ts_code)
             except:
@@ -140,29 +141,57 @@ class Stock:
                 
                 webbrowser.open(url, new)
 
-        
 
+    def single(self,ts_code):
+        begin_date = '20160101'
+        end_date = '20210202'
+        df=self.pro.daily(ts_code=ts_code, start_date=begin_date, end_date=end_date)       
+        df.to_excel('nemausa/'+ts_code+'.xlsx')
 
+    def analysis(self):
+        openpyxl.load_workbook('0.xlsx')
+        stock_wb =  openpyxl.load_workbook(filename = '0.xlsx')
+        stock_result = stock_wb['Sheet1']
+      
+        ts_code = [stock_result.cell(row=row, column=2).value   for row in range(2, stock_result.max_row+1)]
+            
+
+        all_task = [self.pool.submit(self.single, (word)) for word in ts_code]
+        for future in as_completed(all_task):
+            pass
+
+def max_price():
+    g = os.walk('nemausa')
+    for path,dir_list,file_list in g:  
+        for file_name in file_list:  
+            filename=path+'/'+file_name
+            wb = openpyxl.load_workbook(filename=filename)
+            source = wb['Sheet1']
+            L = [source.cell(row=row, column=5).value for row in range(2, source.max_row+1)]
+            if max(L) > 100:
+                os.remove(filename)
 
 def run():
 
     time_start = time.time()
 
     stock = Stock()
-    # stock.read_csv()
-    # stock.all()
-    # print('len: ' + str(len(stock.result)))
-    # num = floor(len(stock.result)/100)+1
-    # res = partition(stock.result, floor(len(stock.result)/num))
-    # for i, item in zip(range(num),res):
-    #     df = stock.daily(','.join(item))
-    #     df.to_excel(str(i)+'.xlsx')
-    #     stock.count = i
+    stock.read_csv()
+    stock.all()
+    print('len: ' + str(len(stock.result)))
+    num = floor(len(stock.result)/100)+1
+    res = partition(stock.result, floor(len(stock.result)/num))
+    for i, item in zip(range(num),res):
+        df = stock.daily(','.join(item))
+        df.to_excel(str(i)+'.xlsx')
+        stock.count = i
 
     stock.count = 0
     stock.add_name()
-    stock.open_url()
-    
+    stock.analysis()
+    # stock.open_url()
+
+    max_price()
     
     time_end = time.time()
     print('time cost', time_end-time_start, 's')

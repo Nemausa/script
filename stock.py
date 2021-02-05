@@ -1,6 +1,7 @@
 import os
 import csv
 import time
+from xml.etree.ElementTree import fromstring
 import openpyxl
 import webbrowser
 import numpy as np
@@ -200,5 +201,69 @@ def run():
     # os.system('pause')
 
 
-run()
+# run()
+
+
+from datetime import datetime
+stock = Stock()
+# 863,002415.SZ,002415,海康威视,浙江,电器仪表,20100528
+# 2607,600309.SH,600309,万华化学,山东,化工原料,20010105
+# 801,002352.SZ,002352,顺丰控股,深圳,仓储物流,20100205
+ts_code = '002415.SZ'
+df = stock.pro.daily(ts_code=ts_code, start_date='20190101', end_date='20210204')
+df.to_excel(ts_code + '.xlsx')
+# analysis Monday and Friday about price and chage
+wb = openpyxl.load_workbook(ts_code+'.xlsx')
+friday_up =0
+friday_down = 0
+monday_up = 0
+monday_down = 0
+bill = []
+all = []
+result = wb['Sheet1']
+check = 0
+weeks=['星期一','星期二','星期三','星期四','星期五']
+l = [x*0 for x in range(10)]
+for row in range(2, result.max_row+1):
+    date = result.cell(row=row, column=3).value
+    change = result.cell(row=row, column=10).value
+
+    week=datetime.strptime(date, "%Y%m%d").weekday()
+    result.cell(row=row, column=13, value=weeks[week])
+    all.append(change)
+    if change<0:
+        l[week*2] += 1
+    else:
+        l[week*2+1] += 1
+    
+    if week ==1 :
+        bill.append(change)
+
+    if week ==0 or week==4:
+        bill.append(change)  
+
+
+base = 100
+price = 100
+reversd_data = list(reversed(bill))
+reversd_all = list(reversed(all))
+for a in reversd_data:
+    base *=(1+0.01*a)
+
+
+for a in reversd_all:
+    price *=(1+0.01*a)
+wb.save(ts_code+'.xlsx')
+
+    
+print('stock operation on Friday and Monday:' ,base)
+print('stock operation on:' ,price)
+for week in range(5):
+    print(weeks[week],'up: ', str(l[week*2+1]))
+    print(weeks[week],'down: ', str(l[week*2]))
+
+
+
+
+
 

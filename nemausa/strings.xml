@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Impostazioni di sistema </string>
+
+    <!-- Common String -->
+    <string name="cancel">Annulla </string>
+    <string name="ok">Selezionare</string>
+    <string name="save">Salva </string>
+
+    <!-- Radio Group -->
+    <string name="system">Sistema</string>
+    <string name="display">Schermo </string>
+    <string name="audio">Effetto sonoro </string>
+    <string name="network">Internet</string>
+    <string name="bt">Bluetooth </string>
+    <string name="system_upgrade">Aggiornamento sistema </string>
+    <string name="system_clean">Pulizia sistema </string>
+    <string name="about">A proposito di questo veicolo</string>
+    <string name="restore">Ripristina impostazioni di fabbrica </string>
+
+    <!-- System Settings -->
+    <string name="sys_language">Lingua</string>
+    <string name="sys_chinese">Cinese </string>
+    <string name="sys_english">Inglese </string>
+    <string name="sys_time_format">Formato ora</string>
+    <string name="sys_time_12">12 ore </string>
+    <string name="sys_time_24">24 ore </string>
+    <string name="sys_key_sound">Bip comandi</string>
+    <string name="sys_key_sound_off">Spegnimento </string>
+    <string name="sys_key_sound_vol_l">Basso </string>
+    <string name="sys_key_sound_vol_m">In</string>
+    <string name="sys_key_sound_vol_h">Alto</string>
+    <string name="sys_vol_hint">Volume: </string>
+    <string name="sys_vol_media">Volume audio: </string>
+    <string name="sys_vol_navi">Volume navigatore:</string>
+    <string name="sys_vol_bt">Volume telefono: </string>
+    <string name="sys_vol_voice">Volume voce: </string>
+    <string name="sys_vol_speech">Volume voce: </string>
+    <string name="sys_vol_gps_mixing">Mix GPS: </string>
+    <string name="sys_vol_min">0</string>
+    <string name="sys_vol_bt_min">0</string>
+    <string name="sys_vol_max">100</string>
+    <string name="sys_float_ball">Pulsante mobile </string>
+    <string name="sys_autotime">Ora sincronizzazione</string>
+    <string name="sys_autotime_network">Sincronizza ora via internet</string>
+    <string name="sys_autotime_gps">Sincronizza ora via GPS</string>
+    <string name="sys_autotime_off">Spegnimento </string>
+    <string name="sys_autotime_network_tips">Sincronizza ora via internet</string>
+    <string name="sys_autotime_gps_tips">Sincronizza ora via GPS</string>
+    <string name="sys_set_time">Impostazioni orario </string>
+    <string name="sys_set_date">Impostazione data </string>
+    <string name="am">AM </string>
+    <string name="pm">PM </string>
+    <string name="time_split">:</string>
+
+    <!-- Display Settings -->
+    <string name="disp_backlight">Luminosità retroilluminazione: </string>
+    <string name="disp_forbid_video">Driving video </string>
+    <string name="disp_shut_screen">Spegni schermo </string>
+    <string name="disp_screen_saver_effect">Scherzo spento</string>
+    <string name="disp_digital_clock">Orologio digitale </string>
+    <string name="disp_analog_clock">Orologio analogico </string>
+    <string name="disp_black_screen">Schermo nero </string>
+    <string name="display_bright_min">0</string>
+    <string name="display_bright_max">255</string>
+
+    <!-- EQ Settings -->
+    <string name="eq_type">Effetto sonoro </string>
+    <string name="eq_treble">Alti: </string>
+    <string name="eq_alto">Contralti: </string>
+    <string name="eq_bass">Bassi: </string>
+    <string name="eq_subwoofer">Subwoofer: </string>
+    <string name="eq_loundness">Volume: </string>
+    <string name="eq_balance">Campo sonoro </string>
+    <string name="eq_reset">Reset </string>
+    <string name="eq_reset_balance">Reset suoni</string>
+    <string name="eq_user">Utente </string>
+    <string name="eq_jazz">Jazz </string>
+    <string name="eq_pop">Popolare </string>
+    <string name="eq_classiz">Classico </string>
+    <string name="eq_rock">Roccia </string>
+    <string name="eq_news">Notizia </string>
+    <string name="eq_city">Città </string>
+    <string name="eq_electronic">Elettronico </string>
+    <string name="eq_movie">Film e televisione </string>
+    <string name="eq_techno">High Tech </string>
+    <string name="eq_select">Effetto sonoro </string>
+    <string name="eq_front_left">Anteriore sinistro </string>
+    <string name="eq_front_right">Anteriore destro </string>
+    <string name="eq_min">-7</string>
+    <string name="eq_max">7</string>
+    <string name="eq_subwoofer_min">0</string>
+    <string name="eq_subwoofer_max">14</string>
+
+
+    <!-- Network Settings -->
+    <string name="net_wifi">WiFi</string>
+    <string name="net_cellular">Rete mobile </string>
+    <string name="net_wifi_switch">Interruttore WLAN </string>
+    <string name="net_wifi_mac_addr">Indirizzo MAC: </string>
+    <string name="net_available">Rete disponibile </string>
+    <string name="net_connected">Connesso</string>
+    <string name="net_security">Sicurezza: </string>
+    <string name="net_intensity">Potenza segnale: </string>
+    <string name="net_connect">Connessione </string>
+    <string name="net_disconnect">Disconnetti </string>
+    <string name="net_forget">Dimentica rete </string>
+    <string name="net_cellular_switch">Rete mobile </string>
+    <string name="net_hotspot_switch">Hotspot personale </string>
+    <string name="net_hotspot_password">Password Hotspot </string>
+    <string name="net_hotspot_name">Nome Hotspot </string>
+    <string name="net_signal_strength">Potenza segnale </string>
+    <string name="net_wifi_password_error">Errore password o connessione non riuscita</string>
+    <string name="net_opening_wifi">正在打开WLAN&#8230;</string>
+    <string name="net_please_input_pwd">Password Wi-Fi </string>
+
+
+    <!-- wifi -->
+    <string name="wifi_ssid">SSID: </string>
+    <string name="wifi_enc">ENC: </string>
+    <string name="wifi_password">Password: </string>
+    <string name="wifi_connect">Connessione </string>
+    <string name="wifi_forget">Annulla salvataggio </string>
+    <string name="wifi_WLAN_Unprotected">Rete non protetta </string>
+    <string name="wifi_WLAN_UNKNOWN">WLAN SCONOSCIUTA </string>
+    <string name="wifi_WPA_Usable">(WPS disponibile) </string>
+    <string name="wifi_UNABLECONNECT">Impossibile connettersi</string>
+    <string name="wifi_state_SCANNING">正在扫描&#8230;</string>
+    <string name="wifi_state_AUTHENTICATING">正在验证&#8230;</string>
+    <string name="wifi_state_OBTAINING_IPADDR">正在获取ip&#8230;</string>
+    <string name="wifi_state_CONNECTING">正在连接&#8230;</string>
+    <string name="wifi_state_CONNECTED">Connesso</string>
+    <string name="wifi_state_DISCONNECTING">正在断开&#8230;</string>
+    <string name="wifi_state_DISCONNECTED">Disconnesso </string>
+    <string name="wifi_signal_strength">Forte</string>
+    <string name="wifi_signal_mid">In</string>
+    <string name="wifi_signal_low">Basso </string>
+    <string name="wifi_signal_weak">Debole</string>
+    <string name="wifi_fail_to_scan">"Impossibile eseguire la scansione della rete" </string>
+    <string name="wifi_security_none">"No" </string>
+    <string name="wifi_remembered">"Salvato" </string>
+    <string name="wifi_disabled_generic">"Terminato" </string>
+    <string name="wifi_disabled_network_failure">"Configurazione IP non riuscita" </string>
+    <string name="wifi_disabled_by_recommendation_provider">"La qualità della rete è scarsa, quindi non è collegata" </string>
+    <string name="wifi_disabled_wifi_failure">"Connessione WLAN non riuscita" </string>
+    <string name="wifi_disabled_password_failure">"Si è verificato un problema con l'autenticazione" </string>
+    <string name="wifi_cant_connect">"Impossibile connettersi" </string>
+    <string name="wifi_cant_connect_to_ap">"无法连接到“<xliff:g id="AP_NAME">%1$s</xliff:g>”"</string>
+    <string name="wifi_check_password_try_again">"Controlla la password e riprova" </string>
+    <string name="wifi_not_in_range">"Fuori portata" </string>
+    <string name="wifi_no_internet_no_reconnect">"Impossibile connettersi automaticamente" </string>
+    <string name="wifi_no_internet">"Impossibile accedere a Internet" </string>
+    <string name="wifi_connected_no_internet">"Connesso, ma impossibile accedere a Internet" </string>
+
+    <!-- System Upgrade -->
+    <string name="upgrade_usb">Aggiornamento USB </string>
+    <string name="upgrade_ota">Aggiornamento da remoto </string>
+    <string name="upgrade_check_ota">Prova nuovamente</string>
+    <string name="upgrade_no_new_version">Nessuna nuova versione </string>
+    <string name="upgrade_version_info">版本信息</string>
+    <string name="upgrade_version_system">系统版本: %1$s </string>
+    <string name="upgrade_version_mcu">MCU版本: %1$s </string>
+    <string name="upgrade_version_navi">导航版本: %1$s </string>
+    <string name="upgrade_version_voice">语音版本: %1$s </string>
+    <string name="upgrade_version_bt">蓝牙版本: %1$s </string>
+    <string name="upgrade_undetect_upgrade_files">Aggiornamento non rilevato </string>
+    <string name="upgrade_check_usb">Prova nuovamente</string>
+    <string name="upgrade_usb_hint1">Nuovo aggiornamento, vuoi installarlo ora? </string>
+    <string name="upgrade_usb_hint2">Si prega di tenere il veicolo in funzione durante l'installazione </string>
+    <string name="upgrade_usb_yes">确定（%1$dS）</string>
+    <string name="upgrade_usb_no">La prossima volta</string>
+    <string name="upgrade_version_avm">全景版本: %1$s</string>
+
+    <!-- System About -->
+    <string name="about_type">Modello</string>
+    <string name="about_version">Numero versione</string>
+    <string name="about_flash_size">Dimensioni disco rigido</string>
+    <string name="about_version_android">Versione Android </string>
+    <string name="about_ip_addr">Indirizzo IP </string>
+    <string name="about_tuid">TUID </string>
+    <string name="about_factory_password">Immettere password impostazioni di fabbrica </string>
+    <string name="about_factory_password_error">Password errata, riprova! </string>
+
+
+    <!-- System Restore -->
+    <string name="restore_prompt">Ripristina le impostazioni di fabbrica</string>
+    <string name="restore_warning">Questa operazione ripristinerà tutte le impostazioni di sistema ai valori di fabbrica </string>
+    <string name="restore_factory">Ripristina impostazioni di fabbrica </string>
+    <string name="restore_factory_hint">Richiesta</string>
+    <string name="restore_factory_hint_text">Eseguire ripristino alle impostazioni di fabbrica </string>
+    <string name="restore_factory_toast">Ripristinato </string>
+
+    <!-- factory settings -->
+    <string name="usb_mode">Modalità USB </string>
+    <string name="usb_device">Madalità ricevente</string>
+    <string name="usb_host">Ospite </string>
+    <string name="usb0_protocol">Protocollo USB0 </string>
+    <string name="usb1_protocol">Protocollo USB1 </string>
+    <string name="update_usb_protocol">Aggiorna protocollo USB </string>
+    <string name="usb_11">USB1.1 </string>
+    <string name="usb_20">USB2.0 </string>
+    <string name="usb_30">USB3.0 </string>
+    <string name="app_info">Tutte le applicazioni </string>
+    <string name="mcu_upgrade">Aggiornamento MCU </string>
+    <string name="install_tool">Strumento di installazione </string>
+    <string name="bootstart_logo">Impostazioni LOGO di avvio </string>
+    <string name="gps_test">Test GPS </string>
+    <string name="rear_camera_type">Tipo retromarcia </string>
+    <string name="save_log">Salvare log </string>
+    <string name="rear_camera_type_common">Normale</string>
+    <string name="rear_camera_type_avm">Centro commerciale </string>
+    <string name="car_type_select">Selezione del modello </string>
+    <string name="app_select">Selezione dell'applicazione </string>
+    <string name="selectPartNum">设置零件号</string>
+    <string name="uds_info">下线配置信息</string>
+
+    <!-- uuid -->
+    <string name="setting_uuid">UUID </string>
+    <string name="setting_uuid_title">Vuoi masterizzare l'UUID? </string>
+    <string name="setting_uuid_prompt">UUID已存在: %1$s</string>
+    <string name="setting_uuid_set_success">UUID设置成功:\n</string>
+    <string name="setting_uuid_set_already_exist">数据库中已经存在该UUID:\n</string>
+    <string name="setting_uuid_set_out_of_range">Si prega di sostituire il numero di serie! </string>
+    <string name="setting_mapkey_title">Attivare la mappa? </string>
+    <string name="setting_mapkey_active_success">La mappa è stata attivata con successo! </string>
+    <string name="setting_mapkey_active_failed">Dati mappa non esistono, attivazione mappa non riuscita! </string>
+
+    <!-- tuid -->
+    <string name="setting_tuid">TUID </string>
+    <string name="setting_tuid_title">Vuoi masterizzare TUID? </string>
+    <string name="setting_tuid_prompt">TUID已存在: %1$s</string>
+    <string name="setting_tuid_set_success">TUID设置成功:\n</string>
+    <string name="setting_tuid_set_already_exist">数据库中已经存在该TUID:\n</string>
+    <string name="setting_tuid_set_out_of_range">Si prega di sostituire il numero di serie! </string>
+    <string name="setting_tuid_write_cer_file_success">Scrittura corretta file  CER! </string>
+    <string name="setting_tuid_write_cer_file_fail">Impossibile scrivere file CER! </string>
+    <string name="setting_tuid_write_key_file_success">Scrivi correttamente file KEY! </string>
+    <string name="setting_tuid_write_key_file_fail">Impossibile scrivere file KEY! </string>
+    <string name="setting_tuid_write_bks_file_success">Scrivi con successo file BKS! </string>
+    <string name="setting_tuid_write_bks_file_fail">Impossibile scrivere file BKS! </string>
+
+    <!-- alert dialog -->
+    <string name="setting_default">Predefinito</string>
+    <string name="common_confirm">Selezionare</string>
+    <string name="common_cancel">Annulla </string>
+    <string name="common_default">Predefinito</string>
+    <string name="dialog_delete_warning">Eliminare questi oggetti? </string>
+    <string name="dialog_progress_delete">正在删除中\u2026</string>
+    <string name="dialog_progress_paste">正在粘贴中\u2026</string>
+    <string name="dialog_progress_load">正在加载中\u2026</string>
+    <string name="dialog_progress_search">正在搜索中\u2026</string>
+    <string name="dialog_error_title">Errore</string>
+    <string name="load_error">Impossibile caricare </string>
+    <string name="dialog_paste_error_notwritable">Questo percorso non può essere scritto</string>
+    <string name="dialog_paste_error_contained">Impossibile copiare la stessa cartella </string>
+    <string name="dialog_paste_error_nospace">Spazio insufficiente</string>
+    <string name="dialog_paste_error_androidsecure">Includi la cartella .android_secure </string>
+    <string name="dialog_delete_error">Impossibile eliminare </string>
+    <string name="dialog_delete_abort">Elimina terminazione </string>
+    <string name="dialog_caculating">Calcolo </string>
+    <string name="activity_input_confirm">Selezionare</string>
+    <string name="activity_input_cancel">Annulla </string>
+    <string name="activity_title_new_folder">Nuovo nome cartella </string>
+    <string name="alert_insert_udisk">Si prega di inserire l'unità flash USB! </string>
+    <string name="alert_log_file_no_exist">Il file LOG non esiste! </string>
+
+    <!-- setting -->
+    <string name="setting_status_unavailable">Sconosciuto</string>
+
+    <!-- uuid record -->
+    <string name="uuidrecord_uuid_successed">Registrazione UUID avvenuta con successo! </string>
+    <string name="uuidrecord_uuid_failed">Impossibile registrare UUID! </string>
+    <string name="uuidrecord_uuid_exception">UUID anormale! </string>
+    <string name="uuidrecord_uuid_banma_no_exist">Zebra UUID non esiste! </string>
+    <string name="uuidrecord_uuid_jsbd_no_exist">Beidou UUID non esiste! </string>
+    <string name="uuidrecord_uuid_all_no_exist">Zebra UUID e Beidou UUID non esistono! </string>
+    <string name="uuidrecord_uuid_already">L'UUID normale è stato registrato! </string>
+    <string name="uuidrecord_uuid_exception_already">L'UUID anormale è stato registrato! </string>
+
+    <!-- tuid record -->
+    <string name="tuidrecord_tuid_successed">Registrazione TUID avvenuta con successo! </string>
+    <string name="tuidrecord_tuid_all_no_exist">TUID non esiste! </string>
+    <string name="tuidrecord_tuid_failed">Impossibile registrare TUID! </string>
+    <string name="tuidrecord_tuid_exception">TUID è anormale! </string>
+    <string name="tuidrecord_tuid_already">Il TUID normale è stato registrato! </string>
+    <string name="tuidrecord_tuid_exception_already">Il TUID anormale è stato registrato! </string>
+
+    <!-- bt setting -->
+    <string name="btsetting_bt_switch">Interruttore Bluetooth </string>
+    <string name="btsetting_sync">Sincronizzazioni contatti </string>
+    <string name="btsetting_voice_switch">Annuncio chiamata in arrivo </string>
+    <string name="btsetting_discoverable">Può essere trovato </string>
+    <string name="btsetting_bt_name">Nome locale </string>
+    <string name="btsetting_paired_devices">Dispositivo associato </string>
+    <string name="btsetting_status_unpair">Dissociato </string>
+    <string name="btsetting_status_paired">Associato</string>
+    <string name="btsetting_status_connecting">正在连接&#8230;</string>
+    <string name="btsetting_status_connected">Connesso</string>
+    <string name="btsetting_input_dlg_title">Nome Bluetooth </string>
+    <string name="bt_tip_del">Sei sicuro di cancellare </string>
+    <string name="bt_tip">Richiesta</string>
+    <string name="str_edit_ok">Selezionare</string>
+    <string name="str_edit_cancel">Annulla </string>
+    <string name="bt_tip_disconnect">Sei sicuro di scollegare il dispositivo Bluetooth connesso? </string>
+    <string name="bt_tip_btclosed">Il Bluetooth non è attivato </string>
+    <string name="bt_tip_no_pairedlist">Nessun record di abbinamento </string>
+    <string name="bt_tip_nobt">Bluetooth non trovato </string>
+    <string name="bt_tip_loadend">Sincronizzato</string>
+    <string name="bt_tip_isdownloadcontact">Vuoi sincronizzare la rubrica? </string>
+    <string name="bt_tip_deleted">Cancellato</string>
+    <string name="bt_tip_localdevicename_notnull">Immettere almeno un carattere per il nome veicolo </string>
+    <string name="bt_tip_inputdevicename">Inserisci nome veicolo</string>
+
+    <!-- system clean -->
+    <string name="system_clean_used">Usato </string>
+    <string name="system_clean_used_mem">Memoria in esecuzione: </string>
+    <string name="system_clean_used_storage">Memoria: </string>
+    <string name="system_clean_accelerate">Accelerazione sistema </string>
+    <string name="system_clean_clean">Svuota cestino</string>
+    <string name="system_accelerate_finish">Accelerazione completata</string>
+    <string name="system_clean_finish">Pulire </string>
+
+    <!-- Encryption -->
+    <string name="encryption_message">Non autorizzato </string>
+
+    <!-- ECall -->
+    <string name="ecall_calling">Sto chiamando </string>
+    <string name="ecall">Chiamata d'emergenza </string>
+
+    <!-- source mode -->
+    <string name="source_app_radio">Radio </string>
+    <string name="source_app_bt_music">Musica Bluetooth </string>
+    <string name="source_app_usb">USB </string>
+    <string name="source_app_sd">Memoria incorporata </string>
+
+    <!-- authenticate -->
+    <string name="auth_unauth_hint">Non hai completato l'autenticazione! </string>
+    <string name="auth_auth_hint">Gentili utenti, in base ai requisiti del Ministero dell'Industria e dell'Information Technology, per utilizzare la funzione di rete del veicolo è necessaria l'autenticazione del nome proprio.</string>
+    <string name="auth_method1">Metodo autenticazione 1 </string>
+    <string name="auth_method1_hint">Porto la mia carta d'identità per l'autenticazione al negozio 4S </string>
+    <string name="auth_method2">Metodo autenticazione 2 </string>
+    <string name="auth_method2_hint1">使用"欧尚Style"App自助认证</string>
+    <string name="auth_method2_hint2">Scansiona il codice QR a sinistra per scaricarlo e installarlo </string>
+    <string name="auth_rights">Uso gratuito dopo autentificazione:</string>
+    <string name="auth_rights_hint1">Controllo veicolo da remoto "smart"</string>
+    <string name="auth_rights_hint2">Genuine Kuwo music, koala radio online resources</string>
+    <string name="auth_rights_hint3">Goditi Smart Voice e i servizi di navigazione online</string>
+    <string name="auth_rights_hint4">Download dati applicazioni e altri diritti esclusivi per utenti autenticati </string>
+    <string name="auth_auth_later">Certificazione </string>
+
+    <!-- personalize -->
+    <string name="personalize">Personalizzazione</string>
+    <string name="personal_theme">Tema </string>
+    <string name="personal_theme_classic">Classico </string>
+    <string name="personal_theme_motion">Movimento</string>
+    <string name="personal_theme_tech">Tecnologia </string>
+    <string name="personal_wallpaper">Sfondo </string>
+    <string name="personal_system">Sistema</string>
+    <string name="personal_usb">USB </string>
+    <string name="personal_local">Locale </string>
+    <string name="personal_picture_loading_tips">Caricamento in corso... </string>
+    <string name="personal_no_picture_tips">Nessuna immagine </string>
+    <string name="personal_wallpaper_err">L' immagine non è supportata! </string>
+    <string name="personal_wallpaper_loading_tips">Impostazione dello sfondo... </string>
+    <string name="personal_wallpaper_success_tips">Lo sfondo è impostato correttamente! </string>
+    <string name="personal_wallpaper_failed_tips">Impostazione dello sfondo non riuscita! </string>
+
+    <!-- pq -->
+    <string name="pq_set">Qualità dell'immagine</string>
+    <string name="pq_bright">Luminosità</string>
+    <string name="pq_contast">Contrasto </string>
+    <string name="pq_hue">Cromia</string>
+    <string name="pq_saturation">Saturazione </string>
+    <string name="pq_sharpness">Nitidezza </string>
+    <string name="pq_gamma">Temperatura colore </string>
+    <string name="pq_sharpness_hint">Nitidezza: </string>
+    <string name="pq_gamma_hint">Temperatura colore: </string>
+    <string name="pq_dyn_contrast">Contrasto dinamico </string>
+    <string name="pq_dyn_contrast_tips">Contrasto dinamico </string>
+    <string name="pq_mode_colorful">Luminoso </string>
+    <string name="pq_mode_standard">Standard</string>
+    <string name="pq_mode_user_defined">Personalizza </string>
+    <string name="pq_picture_mode">Modalità immagine </string>
+    <string name="pq_global_sat">Saturazione </string>
+    <string name="pq_global_contrast">Contrasto </string>
+    <string name="pq_global_bright">Luminosità</string>
+    <string name="pq_global_hue">Scala di grigi </string>
+    <string name="pq_skin_hue">Scala di grigi pelle</string>
+    <string name="pq_skin_sat">Saturazione pelle </string>
+    <string name="pq_sky_hue">Grigio cielo </string>
+    <string name="pq_sky_sat">Saturazione cielo </string>
+    <string name="pq_grass_hue">Grigio erba </string>
+    <string name="pq_grass_sat">Saturazione dell'erba </string>
+    <string name="pq_global_sat_hint">Saturazione: </string>
+    <string name="pq_global_contrast_hint">Contrasto: </string>
+    <string name="pq_global_bright_hint">luminosità: </string>
+    <string name="pq_global_hue_hint">Scala di grigi: </string>
+    <string name="pq_skin_hue_hint">Scala di grigi pelle: </string>
+    <string name="pq_skin_sat_hint">Saturazione pelle: </string>
+    <string name="pq_sky_hue_hint">Scala di grigi cielo: </string>
+    <string name="pq_sky_sat_hint">Saturazione cielo: </string>
+    <string name="pq_grass_hue_hint">Scala di grigi erba: </string>
+    <string name="pq_grass_sat_hint">Saturazione erba: </string>
+    <string name="eq_eye_care">Comfort visivo </string>
+    <string name="pq_blue_light">Filtro luce blu </string>
+    <string name="pq_blue_light_hint">Filtro luce blu: </string>
+    <string name="eq_basic_color">Regolazione di base </string>
+    <string name="pq_basic_color_other">Altro regolamento </string>
+    <string name="pq_advance_color">Regolazione di alto livello </string>
+    <string name="eq_video_enhance">Ottimizzazione video </string>
+    <string name="pq_reset_item">Ripristina le impostazioni di default </string>
+    <string name="pq_reset">Reset </string>
+
+    <!-- hotspot -->
+    <string name="hotspot">Hotspot WLAN </string>
+    <string name="hotspot_name">Nome Hotspot </string>
+    <string name="hotspot_security">Sicurezza </string>
+    <string name="hotspot_pwd">Password Hotspot </string>
+    <string name="hotspot_psd_tips">La lunghezza della password non può essere inferiore a 8 cifre </string>
+    <string name="hotspot_autoClose">Disattiva automaticamente gli hotspot </string>
+    <string name="hotspot_autoClose_explain">Se nessun dispositivo è connesso, l'hotspot Wi-Fi verrà disattivato </string>
+    <string name="hotspot_maxUsers">Numero massimo di utenti connessi </string>
+    <string name="hotspot_name_too_long">Il nome dell'hotspot è troppo lungo </string>
+
+    <!-- mobile data -->
+    <string name="mobile_data">Dati mobili </string>
+    <string name="mobile_data_type">Standard di rete </string>
+    <string name="mobile_data_operator">Operatore </string>
+    <string name="china_mobile">Compagnia telefonica cinese </string>
+    <string name="china_unicom">China Unicom </string>
+    <string name="china_telecom">China Telecom </string>
+
+    <string-array name="app_seletor">
+        <item>DAB - Digital Radio</item>
+        <item>Miudrive mode</item>
+        <item>语音</item>
+    </string-array>
+
+    <!--Instrument upgrade-->
+    <string name="instrument_upgrade">检测到仪表升级文件，是否需要升级？</string>
+    <string name="confirm_upgrade">升级</string>
+    <string name="coping_file">正在拷贝仪表升级文件，请不要拔出U盘</string>
+    <string name="verify_file">正在校验升级文件，请不要拔出U盘！</string>
+    <string name="upgrade_failure">升级失败！</string>
+    <string name="upgrade_Success">升级成功!</string>
+
+</resources>
